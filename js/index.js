@@ -29,7 +29,7 @@ function addToCart(target) {
 }
 
 // function to get coupon code from customer and get the grand total after giving discount
-function giveDiscount() {
+function getDiscount() {
      const totalPrice = document.getElementById('total-price').innerText;
      const totalPriceValue = parseFloat(totalPrice);
      const totalPriceTwoDecimal = totalPriceValue.toFixed(2);
