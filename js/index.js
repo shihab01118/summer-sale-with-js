@@ -24,7 +24,7 @@ function handleClick(target) {
         buttonApply.removeAttribute('disabled');
     }
 
-    
+    document.getElementById('total').innerText = totalPriceTwoDecimal;
 }
 
 function getCouponCode() {
@@ -38,6 +38,10 @@ function getCouponCode() {
         const discount = (totalPriceTwoDecimal * 20) / 100;
         discountElement.innerText = discount.toFixed(2);
     }
+    else {
+        alert('Invalid Coupon Code');
+        return;
+    }
 
     const discountPriceString = document.getElementById('discount').innerText;
     const discountPrice = parseFloat(discountPriceString)
@@ -46,3 +50,6 @@ function getCouponCode() {
     document.getElementById('total').innerText = grandTotalTwoDecimal;
 }
 
+document.getElementById('btn-reload').addEventListener('click', function() {
+    location.reload();
+})

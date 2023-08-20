@@ -110,7 +110,8 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                 </div>
-                                <h4 id="k-accessories-1-title" class="text-[#111] text-xl font-semibold">K. Accessories</h4>
+                                <h4 id="k-accessories-1-title" class="text-[#111] text-xl font-semibold">K. Accessories
+                                </h4>
                                 <p class="text-xl"><span id="k-accessories-1">39.00</span> TK</p>
                             </div>
                         </div>
@@ -508,12 +509,15 @@
                             <span class="label-text text-2xl font-medium text-[#111]">Have coupon?</span>
                         </label>
                         <label class="input-group">
-                            <input id="coupon-field" type="text" placeholder="coupon code" class="input input-bordered w-[80%]" />
+                            <input id="coupon-field" type="text" placeholder="coupon code"
+                                class="input input-bordered w-[80%]" />
                             <span class="bg-[#E527B2]">
-                                <button id="btn-apply" class="text-white text-xl font-semibold cursor-pointer disabled:cursor-not-allowed" onclick="getCouponCode()" disabled>Apply</button>
+                                <button id="btn-apply"
+                                    class="text-white text-xl font-semibold cursor-pointer disabled:cursor-not-allowed"
+                                    onclick="getCouponCode()" disabled>Apply</button>
                             </span>
                         </label>
-                        
+
                     </div>
                 </div>
                 <!-- cart section -->
@@ -521,12 +525,29 @@
                     <div id="cart" class="text[#111] font-medium text-2xl space-y-2"></div>
                     <hr class="my-3">
                     <div class="space-y-2">
-                        <p class="text[#111] text-2xl font-medium">Total price: <span class="text-gray-400 font-normal"><span id="total-price">0</span>TK</span></p>
-                        <p class="text[#111] text-2xl font-medium">Discount: <span class="text-gray-400 font-normal"><span id="discount">0</span>TK</span></p>
-                        <p class="text[#111] text-2xl font-medium">Total: <span class="text-gray-400 font-normal"><span id="total">0</span>TK</span></p>
+                        <p class="text[#111] text-2xl font-medium">Total price: <span
+                                class="text-gray-400 font-normal"><span id="total-price">0</span>TK</span></p>
+                        <p class="text[#111] text-2xl font-medium">Discount: <span
+                                class="text-gray-400 font-normal"><span id="discount">0</span>TK</span></p>
+                        <p class="text[#111] text-2xl font-medium">Total: <span class="text-gray-400 font-normal"><span
+                                    id="total">0</span>TK</span></p>
                     </div>
                     <hr class="my-6">
-                    <button id="btn-purchase" class="btn bg-[#E527B2] text-white text-xl font-semibold w-full capitalize" disabled>Make Purchase</button>
+                    <button id="btn-purchase"
+                        class="btn bg-[#E527B2] text-white text-xl font-semibold w-full capitalize"
+                        onclick="my_modal_1.showModal()" disabled>MakePurchase</button>
+                    <dialog id="my_modal_1" class="modal">
+                        <form action="./index.html" method="dialog" class="modal-box ">
+                            <div class="text-center pt-10">
+                                <img src="./images/congo.png" alt="congrats" class="block mx-auto mb-6">
+                                <h3 class="font-bold text-5xl text-[#111]">Congratulations</h3>
+                                <p class="py-4 text-xl">You have Purchased successfully!!</p>
+                            </div>
+                            <div class="modal-action flex justify-center pb-10">
+                                <button id="btn-reload" class="btn bg-[#E527B2] text-white text-xl font-semibold capitalize">Go Home</button>
+                            </div>
+                        </form>
+                    </dialog>
                 </div>
             </div>
         </section>
