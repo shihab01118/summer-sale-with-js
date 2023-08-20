@@ -1,5 +1,6 @@
+// function to add product to the cart and get the total price
 let totalPrice = 0;
-function handleClick(target) {
+function addToCart(target) {
     const selectedProductContainer = document.getElementById('cart');
     const productName = target.childNodes[3].childNodes[3].innerText;
     const count = selectedProductContainer.childElementCount;
@@ -27,7 +28,8 @@ function handleClick(target) {
     document.getElementById('total').innerText = totalPriceTwoDecimal;
 }
 
-function getCouponCode() {
+// function to get coupon code from customer and get the grand total after giving discount
+function giveDiscount() {
      const totalPrice = document.getElementById('total-price').innerText;
      const totalPriceValue = parseFloat(totalPrice);
      const totalPriceTwoDecimal = totalPriceValue.toFixed(2);
@@ -50,6 +52,7 @@ function getCouponCode() {
     document.getElementById('total').innerText = grandTotalTwoDecimal;
 }
 
+// event listener to reload page
 document.getElementById('btn-reload').addEventListener('click', function() {
     location.reload();
 })
